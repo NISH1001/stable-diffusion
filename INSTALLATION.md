@@ -18,13 +18,16 @@ This is the *custom* guide to use the [original stable-diffusion repo](https://g
 
 
 ## pytorch specifics to do strictly
-- In the `site-packages/` installation of [[PyTorch]], in `<parent>/site-packages/torch/nn/functional.py` line number **2511**, in the `layer_norm(...)` function, pass the input as contiguous. Something like:
-	-
-	  ``` python
-	  	  return torch.layer_norm(input.contiguous(), normalized_shape, weight, bias, eps, torch.backends.cudnn.enabled)
-	  ```
 
-- download model checkpoint `sd-v1-4.ckpt` from https://huggingface.co/CompVis/stable-diffusion-v-1-4-original
+In the `site-packages/` installation of [[PyTorch]], in `<parent>/site-packages/torch/nn/functional.py` line number **2511**, in the `layer_norm(...)` function, pass the input as contiguous. Something like:
+
+``` python
+      return torch.layer_norm(input.contiguous(), normalized_shape, weight, bias, eps, torch.backends.cudnn.enabled)
+```
+
+# Download the model
+
+Download model checkpoint `sd-v1-4.ckpt` from https://huggingface.co/CompVis/stable-diffusion-v-1-4-original
 	- Copy this to `models/ldm/stable-diffusion-v1/model.ckpt`
 
 # Usage
