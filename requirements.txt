@@ -71,10 +71,10 @@ tensorboard-plugin-wit==1.8.1
 threadpoolctl==3.1.0
 tifffile==2022.8.12
 tokenizers==0.12.1
-torch==1.13.0.dev20220902
-torchaudio==0.13.0.dev20220902
+torch==1.13.0.dev20220901
+torchaudio==0.13.0.dev20220901
 torchmetrics==0.9.3
-torchvision==0.14.0.dev20220902
+torchvision==0.14.0.dev20220901
 tqdm==4.64.0
 transformers==4.19.2
 typing_extensions==4.3.0
